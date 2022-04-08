@@ -1,5 +1,5 @@
 {
-  "name": "jobs",
+  "name":"rails_fight_game",
   "private": true,
   "dependencies": {
     "@rails/actioncable": "^6.0.0",
