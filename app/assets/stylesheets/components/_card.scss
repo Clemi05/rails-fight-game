@@ -1,3 +1,4 @@
+/* Index Fighter */
 .card-fighter {
   overflow: hidden;
   height: 120px;
@@ -36,4 +37,13 @@
 
 .card-fighter-btn {
   margin-top: 15px;
+}
+
+/* Show Fighter */
+
+.card-fighter-title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1em;
 }

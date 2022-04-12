@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="card-fighter-title">
+    <h1>Fighter n°<%= @fighter.id %></h1>
+    <%= link_to 'Edit', edit_fighter_path(@fighter), class: 'btn-flat' %>
+  </div>
+  <h2>Name</h2>
+  <p><%= @fighter.name %></p>
+  <h2>Health Points</h2>
+  <p><%= @fighter.hp %></p>
+  <h2>Attack Points</h2>
+  <p><%= @fighter.attack %></p>
+  <br>
+  <%= link_to 'Back', fighters_path, class: 'btn-ghost' %>
+</div>
+
+<%# .container
+  %h1 Discover fighter n°#{@fighter.id}:
+  %h2 Name
+  %p=@fighter.name
+
+  %h2 Health Points
+  %p=@fighter.hp
+
+  %h2 Attack Points
+  %p=@fighter.attack
+
+  %br
+  =link_to 'Edit', edit_fighter_path(@fighter), class: 'btn-flat'
+  =link_to 'Back', fighters_path, class: 'btn-ghost' %>

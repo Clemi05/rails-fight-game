@@ -1,0 +1,27 @@
+<div class="container">
+  <h1>Create a new fighter</h1>
+
+  <%= simple_form_for(@fighter) do |f| %>
+    <%= f.input :name %><br>
+    <%= f.input :hp, as: :integer %><br>
+    <%= f.input :attack, as: :integer %><br>
+    <%= f.submit class: "btn-form"%>
+  <% end %><br>
+
+  <%= link_to "Back", fighters_path, class:"btn-ghost" %>
+</div>
+
+<%# .container
+  %h1 Create a new fighter
+
+  =simple_form_for(@fighter) do |f|
+    =f.input :name
+    %br
+    =f.input :hp, as: :integer
+    %br
+    =f.input :attack, as: :integer
+    %br
+    =f.submit class: 'btn-form'
+
+  %br
+  =link_to 'Back', fighters_path, class: 'btn-ghost' %>
