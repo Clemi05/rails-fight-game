@@ -1,0 +1,46 @@
+<div class="container">
+  <h1>Discover all the fighters</h1>
+  <%= link_to "+ Add a new fighter", new_fighter_path, class:"btn-flat" %>
+  <br>
+  <br>
+  <% @fighters.each do |fighter| %>
+    <div class="card-fighter">
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+      <div class="card-fighter-infos">
+        <h2><%= fighter.name %></h2>
+        <p><strong>HP:</strong> <%= fighter.hp %></p>
+        <p><strong>Attack:</strong> <%= fighter.attack %></p>
+        <div class="card-fighter-btn">
+          <%= link_to 'Show', fighter, class: 'btn-black' %>
+          <%= link_to 'Edit', edit_fighter_path(fighter), class: 'btn-black' %>
+          <%= link_to 'Destroy', fighter, method: :delete, data: { confirm: 'Are you sure you want to delete this fighter?'}, class: 'btn-black' %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<%# .container
+
+  %h1 Discover all the fighters
+
+  %table
+    %thead
+      %tr
+        %th Name
+        %th HP
+        %th Attack
+        %th{:colspan => 3}
+
+    - @fighters.each do |fighter|
+      %tr
+        %td=fighter.name
+        %td=fighter.hp
+        %td=fighter.attack
+        %td=link_to 'Show', fighter
+        %td=link_to 'Edit', edit_fighter_path(fighter)
+        %td=link_to 'Destroy', fighter, method: :delete, data: { confirm: 'Are you sure you want to delete this fighter?'}
+
+  %br
+
+  =link_to '+ Add a new fighter', new_fighter_path, class: 'btn-flat' %>
