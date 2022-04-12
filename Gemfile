@@ -27,8 +27,10 @@ gem 'haml'
 gem 'rename'
 
 # Front-end gems
+# Autoprefixer
+gem "autoprefixer-rails", "10.2.5"
 # Simple-form to create amazing forms
-gem "simple_form"
+gem 'simple_form', '~> 5.1'
 # Font-Awesome for icons
 gem "font-awesome-sass", "~> 5.15.1"
 
