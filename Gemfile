@@ -32,6 +32,8 @@ gem "simple_form"
 # Font-Awesome for icons
 gem "font-awesome-sass", "~> 5.15.1"
 
+# Gem c
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
@@ -45,6 +47,7 @@ group :development, :test do
   gem 'rubocop-performance', require: false
   gem 'rubocop-rails', require: false
   gem 'rubocop-rspec', require: false
+  gem 'dotenv-rails'
 end
 
 group :development do
