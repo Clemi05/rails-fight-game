@@ -1,0 +1,13 @@
+.container
+
+  %p Name
+  %p=@fighter.name
+
+  %p Health Points
+  %p=@fighter.hp
+
+  %p Attack Points
+  %p=@fighter.attack
+
+  =link_to 'Edit', edit_fighter_path(@fighter)
+  =link_to 'Back', fighters_path

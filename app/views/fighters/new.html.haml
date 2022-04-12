@@ -1,0 +1,13 @@
+.container
+  %h1 Create a new fighter
+
+  =simple_form_for(@fighter) do |f|
+    =f.input :name
+    %br
+    =f.input :hp, as: :integer
+    %br
+    =f.input :attack, as: :integer
+    %br
+    =f.submit
+
+  =link_to 'Back', fighters_path

@@ -25,8 +25,12 @@ gem 'jbuilder', '~> 2.7'
 gem 'haml'
 # Use to rename your Rails app
 gem 'rename'
+
+# Front-end gems
 # Simple-form to create amazing forms
 gem "simple_form"
+# Font-Awesome for icons
+gem "font-awesome-sass", "~> 5.15.1"
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
