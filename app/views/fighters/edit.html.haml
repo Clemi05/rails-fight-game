@@ -1,0 +1,14 @@
+.container
+  %h1 Edit fighter
+
+  =simple_form_for(@fighter) do |f|
+    =f.input :name
+    %br
+    =f.input :hp, as: :integer
+    %br
+    =f.input :attack, as: :integer
+    %br
+    =f.submit class: 'btn-form'
+
+  %br
+  =link_to 'Back', fighters_path, class: 'btn-ghost'

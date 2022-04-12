@@ -6,11 +6,11 @@
   font-weight: lighter;
   opacity: 0.6;
   transition: opacity 0.3s ease;
-}
 
-.btn-ghost:hover {
-  color: #4A4A4A;
-  opacity: 1;
+  &:hover {
+    color: #4A4A4A;
+    opacity: 1;
+  }
 }
 
 .btn-flat {
@@ -20,10 +20,27 @@
   border-color: #1EDD88;
   background-color: #1EDD88;
   transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #1BCB7F;
+    border-color: #1BCB7F;
+    color: white;
+  }
 }
 
-.btn-flat:hover {
-  background-color: #1BCB7F;
-  border-color: #1BCB7F;
+.btn-form {
   color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  border-color: #D42B00;
+  background-color: #D42B00;
+  transition: background-color 0.3s ease;
+  opacity: 0.8;
+
+  &:hover {
+    background-color: #D42B00;
+    border-color: #D42B00;
+    color: white;
+    opacity: 1;
+  }
 }

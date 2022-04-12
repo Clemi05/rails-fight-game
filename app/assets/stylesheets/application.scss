@@ -14,6 +14,10 @@
  *= require_self
  */
 
+ // External libraries
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
  // CSS partials
 @import "components/index";
 
@@ -26,14 +30,6 @@ body {
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
   color: black;
-
-  &:visited {
-    color: #666;
-  }
-
-  &:hover {
-    text-decoration: underline;
-  }
 }

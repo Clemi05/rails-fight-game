@@ -4,4 +4,18 @@ th {
 
 td {
   padding: 0px 8px 8px;
+
+  a {
+
+    text-decoration: none;
+    color: black;
+
+    &:visited {
+      color: #666;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
