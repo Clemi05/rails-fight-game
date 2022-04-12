@@ -25,6 +25,8 @@ gem 'jbuilder', '~> 2.7'
 gem 'haml'
 # Use to rename your Rails app
 gem 'rename'
+# Simple-form to create amazing forms
+gem "simple_form"
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

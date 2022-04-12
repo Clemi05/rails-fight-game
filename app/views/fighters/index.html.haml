@@ -1,0 +1,24 @@
+.container
+
+%h1 All fighters
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th HP
+      %th Attack
+      %th{:colspan => 3}
+
+  - @fighters.each do |fighter|
+    %tr
+      %td=fighter.name
+      %td=fighter.hp
+      %td=fighter.attack
+      %td=link_to 'Show', fighter
+      %td=link_to 'Edit', edit_fighter_path(fighter)
+      %td=link_to 'Destroy', fighter, method: :delete, data: { confirm: 'Are you sure you want to delete the fighter: #{fighter.name}?'}
+
+%br
+
+=link_to 'Add a new fighter', new_fighter_path

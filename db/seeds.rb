@@ -6,3 +6,15 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+puts 'Cleaning db'
+Fighter.destroy_all
+
+puts 'Create fighters'
+
+Fighter.create(name: 'Zorro', hp: 120, attack: 40)
+Fighter.create(name: 'Ichigo', hp: 100, attack: 50)
+Fighter.create(name: 'Kisame', hp: 90, attack: 30)
+Fighter.create(name: 'Levi', hp: 80, attack: 60)
+
+puts 'Done!'
