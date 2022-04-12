@@ -7,14 +7,38 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-puts 'Cleaning db'
+require 'open-uri'
+
+puts 'Cleaning up database...'
+
 Fighter.destroy_all
+puts 'Database cleaned'
 
-puts 'Create fighters'
+puts 'Creating fighters...'
 
-Fighter.create(name: 'Zorro', hp: 120, attack: 40)
-Fighter.create(name: 'Ichigo', hp: 100, attack: 50)
-Fighter.create(name: 'Kisame', hp: 90, attack: 30)
-Fighter.create(name: 'Levi', hp: 80, attack: 60)
+fighter1 = Fighter.create(name: 'Zorro', hp: 120, attack: 25)
+file = URI.open('https://res.cloudinary.com/clemi04/image/upload/v1649779285/development/zorro_ub5kbn.jpg')
+fighter1.photo.attach(io: file, filename: 'zorro.png', content_type: 'img/png')
+fighter1.save!
 
-puts 'Done!'
+fighter2 = Fighter.create(name: 'Ichigo', hp: 100, attack: 30)
+file = URI.open('https://res.cloudinary.com/clemi04/image/upload/v1649779285/development/ichigo_psnekk.jpg')
+fighter2.photo.attach(io: file, filename: 'ichigo.png', content_type: 'img/png')
+fighter2.save!
+
+fighter3 = Fighter.create(name: 'Kisame', hp: 90, attack: 35)
+file = URI.open('https://res.cloudinary.com/clemi04/image/upload/v1649779285/development/kisame_r4jyll.jpg')
+fighter3.photo.attach(io: file, filename: 'kisame.png', content_type: 'img/png')
+fighter3.save!
+
+fighter4 = Fighter.create(name: 'Levi', hp: 80, attack: 39)
+file = URI.open('https://res.cloudinary.com/clemi04/image/upload/v1649779285/development/levi_seyhaa.jpg')
+fighter4.photo.attach(io: file, filename: 'levi.png', content_type: 'img/png')
+fighter4.save!
+
+fighter5 = Fighter.create(name: 'Tanjiro', hp: 210, attack: 20)
+file = URI.open('https://res.cloudinary.com/clemi04/image/upload/v1649778651/development/qpmimsq4qkxhuokexsqh2691ou5r.jpg')
+fighter5.photo.attach(io: file, filename: 'tanjiro.png', content_type: 'img/png')
+fighter5.save!
+
+puts 'DONE! Fighters created with success!'

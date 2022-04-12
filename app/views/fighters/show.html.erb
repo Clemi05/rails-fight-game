@@ -1,16 +1,27 @@
 <div class="container">
+  <br>
+  <%= link_to 'Back', fighters_path, class: 'btn-ghost' %>
   <div class="card-fighter-title">
     <h1>Fighter n°<%= @fighter.id %></h1>
     <%= link_to 'Edit', edit_fighter_path(@fighter), class: 'btn-flat' %>
   </div>
-  <h2>Name</h2>
-  <p><%= @fighter.name %></p>
-  <h2>Health Points</h2>
-  <p><%= @fighter.hp %></p>
-  <h2>Attack Points</h2>
-  <p><%= @fighter.attack %></p>
-  <br>
-  <%= link_to 'Back', fighters_path, class: 'btn-ghost' %>
+  <div class="card-fighter-profile">
+    <%= cl_image_tag @fighter.photo.key %>
+    <div class="card-fighter-profile-infos">
+      <div class="card-fighter-profile-name">
+        <h2>Name</h2>
+        <p><%= @fighter.name %></p>
+      </div>
+    <div class="card-fighter-profile-hp">
+      <h2>Health Points</h2>
+      <p><%= @fighter.hp %></p>
+    </div>
+    <div class="card-fighter-profile-attack">
+      <h2>Attack Points</h2>
+      <p><%= @fighter.attack %></p>
+    </div>
+    </div>
+  </div>
 </div>
 
 <%# .container

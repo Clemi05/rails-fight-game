@@ -1,5 +1,6 @@
 class FightersController < ApplicationController
   before_action :set_fighter, only: %i[show edit update destroy]
+
   def index
     @fighters = Fighter.all
   end
@@ -45,6 +46,6 @@ class FightersController < ApplicationController
   end
 
   def fighter_params
-    params.require(:fighter).permit(:name, :hp, :attack)
+    params.require(:fighter).permit(:name, :hp, :attack, :photo)
   end
 end

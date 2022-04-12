@@ -4,13 +4,13 @@
   <br>
   <br>
   <% @fighters.each do |fighter| %>
-    <div class="card-fighter">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-      <div class="card-fighter-infos">
+    <div class="card-list-fighter">
+      <%= cl_image_tag fighter.photo.key %>
+      <div class="card-list-fighter-infos">
         <h2><%= fighter.name %></h2>
         <p><strong>HP:</strong> <%= fighter.hp %></p>
         <p><strong>Attack:</strong> <%= fighter.attack %></p>
-        <div class="card-fighter-btn">
+        <div class="card-list-fighter-btn">
           <%= link_to 'Show', fighter, class: 'btn-black' %>
           <%= link_to 'Edit', edit_fighter_path(fighter), class: 'btn-black' %>
           <%= link_to 'Destroy', fighter, method: :delete, data: { confirm: 'Are you sure you want to delete this fighter?'}, class: 'btn-black' %>
