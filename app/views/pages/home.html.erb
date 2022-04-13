@@ -1,1 +1,23 @@
-<h1>Hello World</h1>
+<div class="container">
+  <h1 class="text-align">Welcome on Rails Fight Game!</h1>
+  <h4 class="text-align">You want to fight with your favorite fighters?</h4>
+  <div class="cards-homepage">
+    <%= link_to fighters_path do %>
+      <div class="card-homepage">
+        <%= image_tag "https://res.cloudinary.com/clemi04/image/upload/v1649859839/development/fight-img_ctklpv.png" %>
+        <h4>See all fighters</h4>
+      </div>
+    <% end %>
+    <%= link_to fights_path do %>
+      <div class="card-homepage">
+        <%= image_tag "https://res.cloudinary.com/clemi04/image/upload/v1649837280/development/logo-fight-game_ue4sg8.png" %>
+        <h4>Let's have a fight!!!!</h4>
+      </div>
+    <% end %>
+    <%= link_to new_fighter_path do %>
+      <div class="card-homepage">
+        <%= image_tag "https://res.cloudinary.com/clemi04/image/upload/v1649859839/development/plus-img_nhhtze.png" %>
+        <h4>Add a new fighter</h4>
+      </div>
+    <% end %>
+</div>

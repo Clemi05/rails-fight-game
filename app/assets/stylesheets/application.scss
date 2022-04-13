@@ -31,12 +31,25 @@ body {
 a {
   text-decoration: none;
   color: black;
+
+  &:hover {
+    color: black;
+  }
+}
+
+.text-align {
+  text-align: center;
+}
+
+h1.text-align {
+  text-align: center;
+  margin-top: 40px;
 }
 
 .winner {
-  color: #1EDD88;
+  color: green;
 }
 
 .loser {
-  color: #D42B00;
+  color: red;
 }

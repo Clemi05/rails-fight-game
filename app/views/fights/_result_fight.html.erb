@@ -3,5 +3,9 @@
   <div class="card-list-fighter-infos">
     <h2><%= fighter.name %></h2>
     <p>Remaining HP at the end of the fight : <strong><%= fighter.hp %></strong></p>
+    <div class="card-list-fighter-stats">
+      <p>Victories: <span class="victories"><%= fighter.won_fights %></span></p>
+      <p>Losses: <span class="losses"><%= fighter.lost_fights %></span></p>
+    </div>
   </div>
 </div>
