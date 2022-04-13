@@ -1,5 +1,6 @@
 class FightsController < ApplicationController
-  before_action :set_fight, only: %i[show]
+  require 'fight_arena'
+  before_action :set_fighters, only: %i[result]
 
   def index
     @fighters = Fighter.all
@@ -24,9 +25,12 @@ class FightsController < ApplicationController
     redirect_to fighters_path
   end
 
-  private
+  def result
+    @result = FightArena.result(@fighter1, @fighter2)
+  end
 
-  def set_fight
-    @fight = Fight.includes(:winner, :loser).find(params[:id])
+  def set_fighters
+    @fighter1 = Fighter.find_by(id: params['fighter']['1'])
+    @fighter2 = Fighter.find_by(id: params['fighter']['2'])
   end
 end

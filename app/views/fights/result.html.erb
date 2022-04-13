@@ -1,0 +1,13 @@
+<div class="container">
+  <br>
+  <h1>Output of the fight</h1>
+  <br>
+  <div>
+    <div>
+      <h2 class="winner">Winner:</h2>
+      <%= render 'result_fight', fighter: @result[:winner][:fighter] %>
+      <h2 class="loser">Loser:</h2>
+      <%= render 'result_fight', fighter: @result[:loser][:fighter] %>
+    </div>
+  </div>
+</div>
