@@ -1,0 +1,23 @@
+<div class="container">
+  <br>
+  <h1>Pick two fighters</h1>
+  <br>
+  <%= simple_form_for(:fighter, url: root_path) do |f| %>
+    <div class="container mt-4">
+      <div class="d-flex justify-content-evenly align-items-center">
+        <%= render 'pick_fighter', id: 1, fighters: @fighters, f: f %>
+        <div class="col-xs">
+          <strong>VS</strong>
+        </div>
+        <%= render 'pick_fighter', id: 2, fighters: @fighters, f: f %>
+      </div>
+
+      <div class="row mt-4">
+      <div class="col text-center" >
+        <%= f.submit "Let's get ready to rumbleeeeee", class: 'btn-red' %>
+        </div>
+      </div>
+
+    </div>
+  <% end %>
+</div>

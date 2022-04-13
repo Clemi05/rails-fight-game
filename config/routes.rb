@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   root 'pages#index'
 
   resources :fighters
+  resources :fights, except: %i[edit destroy]
 end

@@ -2,7 +2,7 @@ class FightsController < ApplicationController
   before_action :set_fight, only: %i[show]
 
   def index
-    @fights = Fight.all
+    @fighters = Fighter.all
   end
 
   def new
