@@ -1,0 +1,18 @@
+.navbar-fight-game {
+  justify-content: space-between;
+  background: white;
+
+  .navbar-brand img {
+    width: 45px;
+  }
+
+  .navbar-collapse {
+    flex-grow: 0;
+
+    a {
+      font-size: 14px;
+      font-weight: bold;
+    }
+  }
+
+}

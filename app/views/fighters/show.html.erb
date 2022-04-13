@@ -1,9 +1,12 @@
 <div class="container">
-  <br>
-  <%= link_to 'Back', fighters_path, class: 'btn-ghost' %>
-  <div class="card-fighter-title">
-    <h1>Fighter n°<%= @fighter.id %></h1>
-    <%= link_to 'Edit', edit_fighter_path(@fighter), class: 'btn-flat' %>
+  <div class="card-fighter-header">
+    <div class="card-fighter-title">
+      <h1>Fighter: <%= @fighter.name %></h1>
+      <%= link_to 'Edit', edit_fighter_path(@fighter), class: 'btn-flat' %>
+    </div>
+    <div class="card-fighter-btn-back">
+      <%= link_to 'Back', fighters_path, class: 'btn-ghost' %>
+    </div>
   </div>
   <div class="card-fighter-profile">
     <%= cl_image_tag @fighter.photo.key %>
