@@ -1,18 +1,17 @@
 module FightArena
   mattr_accessor :fighter1_attacks, :fighter2_attacks
   mattr_accessor :fighter1, :fighter2
+  # mattr_accessor :equipment1, :equipment2
 
   class << self
     # This method calculates the output of the fight between two fighters.
-    # Input : fighter1, Fighter who will start the round
-    #         fighter2, oposant of fighter1
-
     def result(fighter1, fighter2)
       self.fighter1_attacks = []
       self.fighter2_attacks = []
       self.fighter1 = fighter1
       self.fighter2 = fighter2
-      fighting_round while fighter1.hp >= 0 && fighter2.hp >= 0
+      # assign_equipment(equipment1, equipment2)
+      fight_round while fighter1.hp >= 0 && fighter2.hp >= 0
       winner, loser = calculate_result
       Fight.create(winner: winner[0], loser: loser[0])
       serialize(winner, loser)
@@ -20,7 +19,7 @@ module FightArena
 
     private
 
-    def fighting_round
+    def fight_round
       fighter1_attacks << fighter1.attack_damage
       fighter2.hp -= fighter1_attacks.last
       return if fighter2.hp < 1
@@ -35,12 +34,21 @@ module FightArena
       [winner, loser]
     end
 
+    # def assign_equipment(equipment1, equipment2)
+    #   equipment1 = Equipment.find_by(id:)
+    #   fighter1.hp += equipment1.defense
+    #   fighter1.attack += equipment1.attack
+
+    #   equipment2 = Equipment.find_by(id:)
+    #   fighter2.hp += equipment2.defense
+    #   fighter2.attack += equipment2.attack
+    # end
+
     def serialize(winner, loser)
       {
         winner: { fighter: winner[0] },
         loser: { fighter: loser[0] }
       }
     end
-
   end
 end

@@ -9,12 +9,13 @@
 
 require 'open-uri'
 
-puts 'Cleaning up database...'
+# puts 'Cleaning up database...'
 
-Fighter.destroy_all
-puts 'Database cleaned'
+# Equipment.destroy_all
+# Fighter.destroy_all
+# puts 'Database cleaned'
 
-puts 'Creating fighters...'
+# puts 'Creating fighters...'
 
 fighter1 = Fighter.create(name: 'Zorro', hp: 120, attack: 25)
 file = URI.open('https://res.cloudinary.com/clemi04/image/upload/v1649779285/development/zorro_ub5kbn.jpg')
@@ -42,3 +43,19 @@ fighter5.photo.attach(io: file, filename: 'tanjiro.png', content_type: 'img/png'
 fighter5.save!
 
 puts 'DONE! Fighters created with success!'
+
+puts 'Create equipments...'
+
+equipment1 = Equipment.create(name: 'Katana', attack: 15, defense: 0)
+equipment1.save!
+
+equipment2 = Equipment.create(name: 'Shild', attack: 0, defense: 20)
+equipment2.save!
+
+equipment3 = Equipment.create(name: 'Kunai', attack: 5, defense: 0)
+equipment3.save!
+
+equipment4 = Equipment.create(name: 'Bow', attack: 8, defense: 0)
+equipment4.save!
+
+puts 'DONE! Equipments created with success!'

@@ -4,6 +4,7 @@ class FightsController < ApplicationController
 
   def index
     @fighters = Fighter.all
+    @equipments = Equipment.all
   end
 
   def new
@@ -21,7 +22,6 @@ class FightsController < ApplicationController
   def destroy
     @fight = Fight.find(params[:id])
     @fight.destroy
-    # need to redirect to index/homepage
     redirect_to fighters_path
   end
 
@@ -33,4 +33,9 @@ class FightsController < ApplicationController
     @fighter1 = Fighter.find_by(id: params['fighter']['1'])
     @fighter2 = Fighter.find_by(id: params['fighter']['2'])
   end
+
+  # def set_equipments
+  #   @equipment1 = Equipment.find_by(id:)
+  #   @equipment2 = Equipment.find_by(id:)
+  # end
 end
