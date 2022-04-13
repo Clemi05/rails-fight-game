@@ -2,8 +2,9 @@
   <br>
   <h1>Pick two fighters</h1>
   <br>
+  <br>
   <%= simple_form_for(:fighter, url: root_path) do |f| %>
-    <div class="container mt-4">
+    <div>
       <div class="d-flex justify-content-evenly align-items-center">
         <%= render 'pick_fighter', id: 1, fighters: @fighters, f: f %>
         <div class="col-xs">
