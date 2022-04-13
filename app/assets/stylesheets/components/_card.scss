@@ -1,7 +1,7 @@
 /* Index Fighter */
 .card-list-fighter {
   overflow: hidden;
-  height: 120px;
+  height: 150px;
   background: white;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   display: flex;
@@ -9,34 +9,59 @@
   margin-top: 10px;
   margin-bottom: 10px;
   border-radius: 5px;
-}
 
-.card-list-fighter img {
-  height: 100%;
-  width: 120px;
-  object-fit: cover;
-}
+  img {
+    height: 100%;
+    width: 120px;
+    object-fit: cover;
+  }
 
-.card-list-fighter h2 {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
-}
+  h2 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+  }
 
-.card-list-fighter p {
-  font-size: 12px;
-  line-height: 1.4;
-  opacity: .7;
-  margin-bottom: 0;
-  margin-top: 8px;
-}
+  p {
+    font-size: 12px;
+    line-height: 1.4;
+    opacity: .7;
+    margin-bottom: 0;
+    margin-top: 8px;
+  }
 
-.card-list-fighter .card-list-fighter-infos {
-  padding: 16px;
-}
+  .card-list-fighter-infos {
+    padding: 16px;
+  }
 
-.card-list-fighter-btn {
-  margin-top: 15px;
+  .card-list-fighter-btn {
+    margin-top: 15px;
+  }
+
+  .card-list-fighter-stats {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1em;
+
+    p {
+      font-weight: bold;
+    }
+
+    .victories, .losses {
+      color: #ffffff;
+      padding: 4px;
+      border-radius: 4px;
+    }
+
+    .victories {
+      background-color: green;
+    }
+
+    .losses {
+      background-color: red;
+    }
+  }
 }
 
 /* Show Fighter */
@@ -58,36 +83,36 @@
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-}
 
-.card-fighter-profile > img {
-  height: 350px;
-  width: 100%;
-  object-fit: cover;
-}
+  img {
+    height: 350px;
+    width: 100%;
+    object-fit: cover;
+  }
 
-.card-fighter-profile h2 {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
-}
+  h2 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+  }
 
-.card-fighter-profile p {
-  color: #ffffff;
-  font-size: 14px;
-  margin: 0;
-  background-color: #000000;
-  padding: 8px 24px;
-  border-radius: 4px;
-  font-weight: lighter;
-}
+  p {
+    color: #ffffff;
+    font-size: 14px;
+    margin: 0;
+    background-color: #000000;
+    padding: 8px 24px;
+    border-radius: 4px;
+    font-weight: lighter;
+  }
 
-.card-fighter-profile .card-fighter-profile-infos {
-  padding: 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  position: relative;
+  .card-fighter-profile-infos {
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: relative;
+  }
 }
 
 .card-fighter-profile-name, .card-fighter-profile-hp, .card-fighter-profile-attack {

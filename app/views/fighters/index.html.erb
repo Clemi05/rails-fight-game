@@ -10,6 +10,10 @@
         <h2><%= fighter.name %></h2>
         <p><strong>HP:</strong> <%= fighter.hp %></p>
         <p><strong>Attack:</strong> <%= fighter.attack %></p>
+        <div class="card-list-fighter-stats">
+          <p>Victories: <span class="victories"><%= fighter.won_fights %></span></p>
+          <p>Losses: <span class="losses"><%= fighter.lost_fights %></span></p>
+        </div>
         <div class="card-list-fighter-btn">
           <%= link_to 'Show', fighter, class: 'btn-black' %>
           <%= link_to 'Edit', edit_fighter_path(fighter), class: 'btn-black' %>
