@@ -12,10 +12,10 @@ require 'open-uri'
 # puts 'Cleaning up database...'
 
 # Equipment.destroy_all
-# Fighter.destroy_all
+Fighter.destroy_all
 # puts 'Database cleaned'
 
-# puts 'Creating fighters...'
+puts 'Creating fighters...'
 
 fighter1 = Fighter.create(name: 'Zorro', hp: 120, attack: 25)
 file = URI.open('https://res.cloudinary.com/clemi04/image/upload/v1649779285/development/zorro_ub5kbn.jpg')
